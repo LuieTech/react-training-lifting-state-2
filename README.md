@@ -5,15 +5,15 @@ Demo: https://ironptsolutions.github.io/lab-react-lifting-state-up/index.html
 ## Componentes
 
 - EventList: listado de todos los eventos.
-- EventItem: Evento en concreto, mostraremos su imágen, título, fecha, tags y las personas que asistirán.
+- EventItem: Evento en concreto, mostraremos su imagen, título, fecha, tags y las personas que asistirán.
 
 ## Iteración 1
 
-Implementad ambos componentes, en esta iteración no os preocupéis por los estilo, simplemente lograr que se muestre un listado de títulos de los eventos.
+Implementad ambos componentes, en esta iteración no os preocupéis por los estilos, simplemente lograr que se muestre un listado de títulos de los eventos.
 
 ## Iteración 2
 
-Diseño del componente de evento, podéis utilizar esta card de bootstrap de base https://getbootstrap.com/docs/5.3/components/card/#images.
+Diseño del componente de evento, podéis utilizar esta card de Bootstrap de base https://getbootstrap.com/docs/5.3/components/card/#images.
 No os preocupéis si no os queda igual, dejad para el final los retoques.
 
 ## Iteración 3
@@ -27,5 +27,5 @@ Retoca los estilos del evento!
 ## Bonus
 
 - Buscador de eventos por título
-- Link de google maps del evento
+- Link de Google Maps del evento
 - Ordenar los eventos por fecha (sin necesidad de tocar ningún botón)
