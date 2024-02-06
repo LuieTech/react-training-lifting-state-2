@@ -1,17 +1,35 @@
 import React from 'react'
+import "./item.css"
+import moment from 'moment'
 
-function ListItem({d1}) {
+function ListItem({event, onLike}) {
 
-  return <>
+  const handleOnLike = () => {
+    onLike(event.title)
+  }
 
-    <img src={d1.image} className="card-img-top" alt="..." />
-    <div className="card-body">
-      <h4>{d1.title}</h4>
-      <h5>{d1.start}</h5>
-      <p className="card-text"><span>{d1.tags}</span></p>
-    </div>
+  return (
   
-  </>
+    <div className='card event shadow-hover'>
+      <img src={event.image} className="card-img-top" alt="..." />
+      <div className="card-body px-2 position-relative">
+        <div className="actions position-absolute">
+          <span><i className='fa fa-user'>{event.attending}</i></span>  
+          <span role='button' onClick={handleOnLike}><i className={`fa fa-heart ${event.liked ? 'text-danger' : ''}`}>{event.liked}</i></span>
+        </div>
+        <h5 className='fw-lighter'>{event.title}</h5>
+        <p className='time'>{moment(event.start).format('lll')}</p>
+        {event.tags.map((tag, index) => (
+          <span key={index} className='tag badge rounded-pill text-bg-light fw-light'>{tag}</span>
+        ))}
+      </div>
+    </div>
+
+  )
+}
+
+ListItem.defaultProps = {
+  onLike: () => {}
 }
 
 export default ListItem
